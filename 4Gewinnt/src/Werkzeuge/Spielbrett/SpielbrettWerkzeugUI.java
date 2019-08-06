@@ -27,4 +27,9 @@ public class SpielbrettWerkzeugUI
 	{
 		return _hauptPanel;
 	}
+
+	public JSpielbrettPlan getSpielbrettPlan() 
+	{
+		return _spielbrettPlan;
+	}
 }

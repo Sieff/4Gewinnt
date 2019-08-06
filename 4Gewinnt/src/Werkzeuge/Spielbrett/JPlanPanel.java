@@ -17,7 +17,7 @@ public class JPlanPanel extends JPanel
     private static final Color FARBE_ROT = Color.RED;
     private static final Color FARBE_BLAU = Color.BLUE;
 	
-    private final Border defaultBorder = new BevelBorder(BevelBorder.RAISED);
+    private final Border defaultBorder = new BevelBorder(BevelBorder.LOWERED);
     private Border currentBorder = defaultBorder;
     
 	private static final long serialVersionUID = 1L;

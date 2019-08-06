@@ -15,8 +15,6 @@ public class JSpielbrettPlan extends JPanel
 {
 	public static Dimension PLANPANEL_GROESSE = new Dimension(22, 22);
 	private JPlanPanel[][] _panels;
-	private Set<Stelle> _roteStellen;
-	private Set<Stelle> _blaueStellen;
 	
 	public JSpielbrettPlan(int hoehe, int breite)
 	{
@@ -50,13 +48,13 @@ public class JSpielbrettPlan extends JPanel
 	public void markiereStelleBlau(Stelle stelle)
 	{
 		_panels[stelle.getHoehenKoordinate()][stelle.getBreitenKoordinate()].setBlau();
-		_blaueStellen.add(stelle);
+		
 	}
 	
 	public void markiereStelleRot(Stelle stelle)
 	{
 		_panels[stelle.getHoehenKoordinate()][stelle.getBreitenKoordinate()].setRot();
-		_roteStellen.add(stelle);
+		
 	}
 	
 	

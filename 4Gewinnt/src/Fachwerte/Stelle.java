@@ -49,4 +49,9 @@ public class Stelle
 	{
 		return 420 * 69 * _hoehenKoordinate + _breitenKoordinate;
 	}
+	
+	public String toString()
+	{
+		return this._hoehenKoordinate + "," + this._breitenKoordinate;
+	}
 }

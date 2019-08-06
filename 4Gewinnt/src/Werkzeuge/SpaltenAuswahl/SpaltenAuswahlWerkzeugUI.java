@@ -1,5 +1,7 @@
 package Werkzeuge.SpaltenAuswahl;
 
+import java.awt.event.ActionListener;
+
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -30,4 +32,10 @@ public class SpaltenAuswahlWerkzeugUI
 		return _hauptPanel;
 	}
 	
+	
+	public JSpaltenwahlPlan getSpaltenwahlPlan()
+	{
+		return _spaltenwahlPlan;
+	}
+
 }
