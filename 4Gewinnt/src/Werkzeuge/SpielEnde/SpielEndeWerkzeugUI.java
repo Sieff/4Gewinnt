@@ -6,6 +6,12 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+/**
+ * Die UI mit JFrame die erscheint wenn ein Spieler gewinnt
+ * 
+ * @author steff
+ *
+ */
 public class SpielEndeWerkzeugUI 
 {
 	private String _gewinner; 

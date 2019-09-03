@@ -2,6 +2,12 @@ package Werkzeuge.SpielerAnzeige;
 
 import javax.swing.JPanel;
 
+/**
+ * Sorgt für die UI mit dem JPanel, dass den aktuellen Spieler anzeigt
+ * 
+ * @author steff
+ *
+ */
 public class SpielerAnzeigeWerkzeug 
 {
 	private SpielerAnzeigeWerkzeugUI _UI;

@@ -61,6 +61,9 @@ public class SpielEndeWerkzeug extends ObservableSubwerkzeug
 		});
 	}
 	
+	/**
+	 * Reagiert auf das drücken eines Buttons in der SpielEndeUI
+	 */
 	private void reagiereAufEingabe()
 	{
 		_UI.getFrame().dispose();
@@ -68,6 +71,11 @@ public class SpielEndeWerkzeug extends ObservableSubwerkzeug
 		informiereUeberAenderung();
 	}
 	
+	/**
+	 * Gibt zurück ob das Fenster mit dem Spiel geschlossen werden soll
+	 * 
+	 * @return boolean _fensterSchlie0en
+	 */
 	public boolean getFensterSchließen()
 	{
 		return _fensterSchließen;
