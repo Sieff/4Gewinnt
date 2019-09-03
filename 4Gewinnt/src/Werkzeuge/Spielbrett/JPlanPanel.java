@@ -3,21 +3,27 @@ package Werkzeuge.Spielbrett;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Insets;
-import java.awt.Rectangle;
+import java.awt.geom.RoundRectangle2D;
 
 import javax.swing.*;
-import javax.swing.border.BevelBorder;
 import javax.swing.border.Border;
+import javax.swing.border.EmptyBorder;
 
 import Fachwerte.Stelle;
 
+/**
+ * Ein einzelnes Panel auf dem Spielplan, kann entweder rot, blau oder grau sein
+ * 
+ * @author steff
+ *
+ */
 public class JPlanPanel extends JPanel
 {
     private static final Color FARBE_FREI = Color.GRAY;
     private static final Color FARBE_ROT = Color.RED;
     private static final Color FARBE_BLAU = Color.BLUE;
 	
-    private final Border defaultBorder = new BevelBorder(BevelBorder.LOWERED);
+    private final Border defaultBorder = new EmptyBorder(0, 0, 0, 0);
     private Border currentBorder = defaultBorder;
     
 	private static final long serialVersionUID = 1L;
@@ -33,28 +39,49 @@ public class JPlanPanel extends JPanel
 		_blau = false;
 	}
 	
+	/**
+	 * Setzt ein Panel rot
+	 */
 	public void setRot()
 	{
 		_rot = true;
 		repaint();
 	}
 	
+	/**
+	 * Setzt ein Panel blau
+	 */
 	public void setBlau()
 	{
 		_blau = true;
 		repaint();
 	}
 	
+	/**
+	 * Gibt Stelle des Panels zurück
+	 * 
+	 * @return die Stelle des Panels
+	 */
 	public Stelle getStelle()
 	{
 		return _stelle;
 	}
 	
+	/**
+	 * Gibt zurück ob das Panel rot ist
+	 * 
+	 * @return ob das Panel rot ist
+	 */
 	public boolean getRot()
 	{
 		return _rot;
 	}
 	
+	/**
+	 * Gibt zurück ob das Panel blau ist
+	 * 
+	 * @return ob das Panel blau ist
+	 */
 	public boolean getBlau()
 	{
 		return _blau;
@@ -63,31 +90,22 @@ public class JPlanPanel extends JPanel
 	@Override
     protected void paintComponent(Graphics g)
     {
-        /*
-         * Der Button zeichnet sich selbst, weil das Einfaerben basierend auf
-         * seinem Zustand mit dem normalen JButton nicht plattformuebergreifend
-         * fuer alle Look&Feels funktioniert.
-         */
-
-        // Diese Methode soll den Zustand von g nicht veraendern, deshalb wird
-        // hier eine Kopie erstellt, mit der dann gearbeitet wird.
         Graphics graphics = g.create();
 
         try
         {
-            // Hintergrund einfaerben
             Color color = farbeFuerAktuellenZustand();
             graphics.setColor(color);
             Insets borderInsets = currentBorder.getBorderInsets(this);
-            Rectangle viewRect = new Rectangle();
+            RoundRectangle2D.Double viewRect = new RoundRectangle2D.Double();
             viewRect.x = borderInsets.left;
             viewRect.y = borderInsets.top;
             viewRect.width = getWidth() - borderInsets.left
                     - borderInsets.right;
             viewRect.height = getHeight() - borderInsets.top
                     - borderInsets.bottom;
-            graphics.fillRect(viewRect.x, viewRect.y, viewRect.width,
-                    viewRect.height);
+            graphics.fillRoundRect((int) viewRect.x, (int) viewRect.y, (int) viewRect.width,
+                    (int) viewRect.height, Integer.MAX_VALUE, Integer.MAX_VALUE );
         }
         finally
         {
@@ -95,6 +113,11 @@ public class JPlanPanel extends JPanel
         }
     }
 
+	/**
+	 * Gibt die Farbe für das Panel zurück
+	 * 
+	 * @return Farbe für das Panel
+	 */
 	private Color farbeFuerAktuellenZustand() 
 	{
 		if (_rot)

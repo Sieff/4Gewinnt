@@ -5,14 +5,21 @@ import java.awt.Dimension;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
-import java.util.Set;
 
 import javax.swing.JPanel;
 
 import Fachwerte.Stelle;
 
+/**
+ * Spielbrettplan als JPanel bestehend aus einem Doppelarray an JPlanPanels
+ * 
+ * @author steff
+ *
+ */
 public class JSpielbrettPlan extends JPanel
 {
+
+	private static final long serialVersionUID = 1L;
 	public static Dimension PLANPANEL_GROESSE = new Dimension(22, 22);
 	private JPlanPanel[][] _panels;
 	
@@ -20,7 +27,6 @@ public class JSpielbrettPlan extends JPanel
 	{
 		setLayout(new GridBagLayout());
 		_panels = new JPlanPanel[hoehe][breite];
-		
         for (int reihe = 0; reihe < breite; reihe++)
         {
         	
@@ -38,6 +44,13 @@ public class JSpielbrettPlan extends JPanel
 		
 	}
 	
+	/**
+	 * Fügt die JPlanPanels im SpielbrettGitter ein
+	 * 
+	 * @param component Die einzufügende Komponente
+	 * @param gridx Die Breitenkoordinate
+	 * @param gridy Die Hoehenkoordinate
+	 */
 	private void imGitterEinfuegen(Component component, int gridx, int gridy)
     {
         add(component, new GridBagConstraints(gridx, gridy, 1, 1, 1.0, 1.0,
@@ -45,21 +58,25 @@ public class JSpielbrettPlan extends JPanel
                         2, 2, 2, 2), 0, 0));
     }
 	
+	/**
+	 * Markiert eine Stelle Blau
+	 * 
+	 * @param stelle die zu markierende Stelle
+	 */
 	public void markiereStelleBlau(Stelle stelle)
 	{
 		_panels[stelle.getHoehenKoordinate()][stelle.getBreitenKoordinate()].setBlau();
 		
 	}
 	
+	/**
+	 * Markiert eine Stelle rot
+	 * 
+	 * @param stelle die zu markierende Stelle
+	 */
 	public void markiereStelleRot(Stelle stelle)
 	{
 		_panels[stelle.getHoehenKoordinate()][stelle.getBreitenKoordinate()].setRot();
 		
 	}
-	
-	
-	
-	
-	private static final long serialVersionUID = 1L;
-
 }

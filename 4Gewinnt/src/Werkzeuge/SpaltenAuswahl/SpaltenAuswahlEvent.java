@@ -2,10 +2,16 @@ package Werkzeuge.SpaltenAuswahl;
 
 import java.util.EventObject;
 
+/**
+ * Ein SpaltenauswahlEvent, dass ein EventObject ist und durch die ausgewaehlte Spalte beschrieben wird
+ * 
+ * @author steff
+ *
+ */
 public class SpaltenAuswahlEvent extends EventObject
 {
 	private static final long serialVersionUID = 1L;
-	int _ausgewaehlteSpalte;
+	private int _ausgewaehlteSpalte;
 	
 	public SpaltenAuswahlEvent(Object source, int spalte)
 	{
@@ -13,13 +19,14 @@ public class SpaltenAuswahlEvent extends EventObject
 		_ausgewaehlteSpalte = spalte;
 	}
 	
+	/**
+	 * Gibt die ausgewaehlte Spalte zurueck
+	 * 
+	 * @return Die ausgewaehlte Spalte
+	 */
 	public int getAusgewaehlteSpalte()
 	{
 		return _ausgewaehlteSpalte;
 	}
 	
-	public String toString()
-	{
-		return "Ausgewaehlte Spalte: " + _ausgewaehlteSpalte;
-	}
 }

@@ -1,12 +1,15 @@
 package Werkzeuge.SpaltenAuswahl;
 
-import java.awt.event.ActionListener;
-
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
-
+/**
+ * Die UI zur Auswahl der Spalte
+ * 
+ * @author steff
+ *
+ */
 public class SpaltenAuswahlWerkzeugUI 
 {
 	private JPanel _hauptPanel;
@@ -17,6 +20,12 @@ public class SpaltenAuswahlWerkzeugUI
 		_hauptPanel = erstelleHauptPanel(breite);
 	}
 	
+	/**
+	 * Erstellt das Hauptpanel zur Auswahl der Spalte
+	 * 
+	 * @param breite Die breite des Spielfelds und somit der Spaltenauswahl
+	 * @return das Hauptpanel der Spaltenauswahl
+	 */
 	private JPanel erstelleHauptPanel(int breite) 
 	{
 		JPanel panel = new JPanel();
@@ -27,12 +36,21 @@ public class SpaltenAuswahlWerkzeugUI
 		return panel;
 	}
 
+	/**
+	 * Gibt das Hauptpanel der Spaltenauswahl zurück.
+	 * 
+	 * @return Das Hauptpanel
+	 */
 	public JPanel getHauptPanel()
 	{
 		return _hauptPanel;
 	}
 	
-	
+	/**
+	 * Gibt den JSpaltenwahlPlan zurück
+	 *  
+	 * @return der Spaltenwahlplan
+	 */
 	public JSpaltenwahlPlan getSpaltenwahlPlan()
 	{
 		return _spaltenwahlPlan;

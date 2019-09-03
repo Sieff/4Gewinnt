@@ -2,20 +2,30 @@ package Werkzeuge.SpaltenAuswahl;
 
 import javax.swing.JPanel;
 
-import Services.SteinSetzerService;
+import Werkzeuge.ObservableSubwerkzeug;
+import Werkzeuge.SpielRahmen.SpielRahmenWerkzeug;
 
-public class SpaltenAuswahlWerkzeug 
+/**
+ * Sorgt für die UI zur Auswahl der Spalte
+ * 
+ * @author steff
+ *
+ */
+public class SpaltenAuswahlWerkzeug extends ObservableSubwerkzeug
 {
 	private SpaltenAuswahlWerkzeugUI _UI;
-	private SteinSetzerService _service;
+	private int _ausgewaehlteSpalte;
 	
-	public SpaltenAuswahlWerkzeug(int breite, SteinSetzerService service)
+	public SpaltenAuswahlWerkzeug(int breite, SpielRahmenWerkzeug spielRahmenWerkzeug)
 	{
+		registriereBeobachter(spielRahmenWerkzeug);
 		_UI = new SpaltenAuswahlWerkzeugUI(breite);
-		_service = service;
 		registriereUIAktionen();
 	}
 	
+	/**
+	 * Registriert Aktionen in der UI
+	 */
 	private void registriereUIAktionen() 
 	{
 		_UI.getSpaltenwahlPlan().addSpaltenAuswahlListener(new SpaltenListener()
@@ -24,22 +34,47 @@ public class SpaltenAuswahlWerkzeug
 					@Override
 					public void auswahlGetaetigt(SpaltenAuswahlEvent e) 
 					{
-						informiereService(e.getAusgewaehlteSpalte());
+						_ausgewaehlteSpalte = e.getAusgewaehlteSpalte();
+						informiereUeberAenderung();
 					}
 			
 				});
+		
+		//TODO Eingabe mit Zahlen
+//		_UI.getSpaltenwahlPlan().addKeyListener(new KeyAdapter() 
+//			{
+//				@Override
+//				public void keyReleased(KeyEvent e)
+//				{
+//					try
+//					{
+//						String s = "" + e.getKeyChar();
+//						_ausgewaehlteSpalte = Integer.parseInt(s);
+//						informiereUeberAenderung();
+//					}
+//					catch(NumberFormatException g){
+//						
+//					}
+//				}
+//			});
 	}
 
+	/**
+	 * Gibt das JPanel der UI zurück
+	 * 
+	 * @return Das JPanel der Spaltenauswahl-UI
+	 */
 	public JPanel getUIPanel()
 	{
 		return _UI.getHauptPanel();
 	}
 	
-	
-	public void informiereService(int spalte)
+	/**
+	 * Gibt die ausgewaehlte Spalte als int zurück
+	 * @return Die ausgewaehlte Spalte als int
+	 */
+	public int getAusgewaehlteSpalte()
 	{
-		_service.setzeStein(spalte);
+		return _ausgewaehlteSpalte;
 	}
-	
-	
 }

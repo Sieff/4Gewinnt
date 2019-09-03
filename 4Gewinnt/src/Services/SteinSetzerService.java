@@ -1,56 +1,63 @@
 package Services;
 
+
 import Fachwerte.Stelle;
 import Materialien.Spielbrett;
-import Werkzeuge.Spielbrett.SpielbrettWerkzeug;
 
+/**
+ * Service zur Berechnung eines zu setzenden Steins
+ * 
+ * @author steff
+ *
+ */
 public class SteinSetzerService 
 {
-	private boolean _rotIstDran;
-	private SpielbrettWerkzeug _spielbrettWerkzeug;
 	private Spielbrett _spielbrett;
 	
-	public SteinSetzerService(SpielbrettWerkzeug werkzeug, Spielbrett spielbrett)
+	public SteinSetzerService(Spielbrett spielbrett)
 	{
-		_spielbrettWerkzeug = werkzeug;
-		_rotIstDran = true;
 		_spielbrett = spielbrett;
 	}
 
-	public void setzeStein(int spalte) 
+	/**
+	 * Berechnet die Stelle die gesetzt werden soll in der übergebenen Spalte
+	 * 
+	 * @param spalte Die Spalte in der die Stelle berechnet werden soll
+	 * @return die Stelle
+	 */
+	public Stelle berechneStein(int spalte) 
 	{
 		int richtigeSpalte = spalte -1;
-		Stelle steinHier;
 		int hoehe = berechneNiedrigsteHoehe(richtigeSpalte);
-		steinHier = Stelle.get(hoehe, richtigeSpalte);
-		if(!istStelleZuHoch(steinHier))
-		{
-			if(_rotIstDran)
-			{
-				setzeRot(steinHier);
-				_rotIstDran = false;
-			}
-			else
-			{
-				setzeBlau(steinHier);
-				_rotIstDran = true;
-			}
-		}
+		return Stelle.get(hoehe, richtigeSpalte);
 	}
-
-	private boolean istStelleZuHoch(Stelle stelle)
+	
+	/**
+	 * Setzt eine Stelle in die Map für rote Stellen auf dem Spielbrett
+	 * 
+	 * @param stelle die zu setzende Stelle
+	 */
+	public void setzeRot(Stelle stelle) 
 	{
-		return stelle.getHoehenKoordinate() < 0;
-	}
-
-	private void setzeRot(Stelle stelle) 
-	{
-		
-		_spielbrettWerkzeug.setzeRot(stelle);
 		_spielbrett.getRote().put(stelle.toString(), stelle);
 	}
 
-
+	/**
+	 * Setzt eine Stelle in die Map für rote Stellen auf dem Spielbrett
+	 * 
+	 * @param stelle die zu setzende Stelle
+	 */
+	public void setzeBlau(Stelle stelle) 
+	{
+		_spielbrett.getBlaue().put(stelle.toString(), stelle);
+	}
+	
+	/**
+	 * Gibt die niedrigste Höhe zurück in der ein Stein gesetzt werden kann in der übergebenen Spalte
+	 * 
+	 * @param spalte Die Spalte in der die Hoehe berechnet werden soll
+	 * @return Die niedrigste mögliche Hoehe
+	 */
 	private int berechneNiedrigsteHoehe(int spalte) 
 	{
 		int i = _spielbrett.getHoehe()-1;
@@ -58,18 +65,15 @@ public class SteinSetzerService
 		{
 			i--;
 		}
-		
 		return i;
-		
-	}
-
-	private void setzeBlau(Stelle stelle) 
-	{
-		
-		_spielbrettWerkzeug.setzeBlau(stelle);	
-		_spielbrett.getBlaue().put(stelle.toString(), stelle);
 	}
 	
+	/**
+	 * Prüft ob eine Stelle bereits belegt ist
+	 * 
+	 * @param stelle die Stelle die überprüft werden soll
+	 * @return Ob die Stelle besetzt ist
+	 */
 	private boolean istStelleBesetzt(Stelle stelle)
 	{
 		return _spielbrett.getBlaue().containsKey(stelle.toString()) || _spielbrett.getRote().containsKey(stelle.toString()) ;

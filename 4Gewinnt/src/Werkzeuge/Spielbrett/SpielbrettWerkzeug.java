@@ -5,6 +5,12 @@ import javax.swing.*;
 import Fachwerte.Stelle;
 import Materialien.Spielbrett;
 
+/**
+ * Sorgt für die SpielbrettUI und das Spielbrett
+ * 
+ * @author steff
+ *
+ */
 public class SpielbrettWerkzeug 
 {
 	SpielbrettWerkzeugUI _UI;
@@ -16,27 +22,54 @@ public class SpielbrettWerkzeug
 		_UI = new SpielbrettWerkzeugUI(hoehe, breite);
 	}
 
+	/**
+	 * Erzeugt das Spielbrett
+	 *  
+	 * @param hoehe Hoehe des Spielbretts
+	 * @param breite Breite des Spielbretts
+	 * @return das Spielbrett
+	 */
 	private Spielbrett erzeugeSpielbrett(int hoehe, int breite) 
 	{
 		return new Spielbrett(hoehe, breite);
 	}
 	
+	/**
+	 * Gibt das Hauptpanel der UI zurück
+	 * 
+	 * @return das Hauptpanel der UI
+	 */
 	public JPanel getUIPanel()
 	{
 		return _UI.getHauptPanel();
 	}
 	
+	/**
+	 * Setzt die übergebene Stelle rot
+	 * 
+	 * @param stelle die zu setzende Stelle
+	 */
 	public void setzeRot(Stelle stelle)
 	{
 
 		_UI.getSpielbrettPlan().markiereStelleRot(stelle);
 	}
 	
+	/**
+	 * Setzt die übergebene Stelle blau
+	 * 
+	 * @param stelle die zu setzende Stelle
+	 */
 	public void setzeBlau(Stelle stelle)
 	{
 		_UI.getSpielbrettPlan().markiereStelleBlau(stelle);
 	}
 	
+	/**
+	 * Gibt das Spielbrett zurück
+	 * 
+	 * @return das Spielbrett
+	 */
 	public Spielbrett getSpielbrett()
 	{
 		return _spielbrett;
