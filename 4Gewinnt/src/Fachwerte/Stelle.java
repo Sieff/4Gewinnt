@@ -22,7 +22,7 @@ public class Stelle
 	}
 	
 	/**
-	 * Fabrikmethode für Stellen
+	 * Fabrikmethode fï¿½r Stellen
 	 * 
 	 * @param hoehe Die Hoehenkoordinate
 	 * @param breite Die Breitenkoordinate
@@ -39,7 +39,7 @@ public class Stelle
 	}
 	
 	/**
-	 * Gibt Hoehenkoordinate der Stelle zurück
+	 * Gibt Hoehenkoordinate der Stelle zurï¿½ck
 	 * 
 	 * @return Die Hoehenkoordinate
 	 */
@@ -49,7 +49,7 @@ public class Stelle
 	}
 	
 	/**
-	 * Gibt die Breitenkoordinate der Stelle zurück
+	 * Gibt die Breitenkoordinate der Stelle zurï¿½ck
 	 * 
 	 * @return Die Breitenkoordinate
 	 */
@@ -59,7 +59,7 @@ public class Stelle
 	}
 	
 	/**
-	 * Prüft ob ein übergebenes Objekt gleich zu der Stelle ist
+	 * Prï¿½ft ob ein ï¿½bergebenes Objekt gleich zu der Stelle ist
 	 * 
 	 * @param Das zu vergleichende Objekt
 	 */
@@ -75,15 +75,15 @@ public class Stelle
 	}
 	
 	/**
-	 * Gibt den Hashcode zurück
+	 * Gibt den Hashcode zurï¿½ck
 	 */
 	public int hashCode()
 	{
-		return 420 * 69 * _hoehenKoordinate + _breitenKoordinate;
+		return 17 * 140 * _hoehenKoordinate + _breitenKoordinate;
 	}
 	
 	/**
-	 * Gibt die Stelle als String zurück
+	 * Gibt die Stelle als String zurï¿½ck
 	 */
 	public String toString()
 	{

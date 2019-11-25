@@ -5,7 +5,7 @@ import java.awt.FlowLayout;
 import javax.swing.*;
 
 /**
- * Die UI für die Groessenauswahl
+ * Die UI fï¿½r die Groessenauswahl
  * 
  * @author steff
  *
@@ -25,14 +25,14 @@ public class GroessenwahlWerkzeugUI
 	}
 
 	/**
-	 * Initialisiert den Dialog für die Groessenauswahl
+	 * Initialisiert den Dialog fï¿½r die Groessenauswahl
 	 */
 	private void initDialog() 
 	{
 		_dialog = new JDialog();
 		_dialog.setLayout(new FlowLayout());
 		
-		_hoehenLabel = new JLabel("Höhe (Max. 10): ");
+		_hoehenLabel = new JLabel("Hoehe (Max. 10): ");
 		_breitenLabel = new JLabel("Breite (Max. 10): ");
 		
 		_hoehe = new JTextField(12);
@@ -53,7 +53,7 @@ public class GroessenwahlWerkzeugUI
 	}
 	
 	/**
-	 * Gibt das Hoehentextfeld zurück
+	 * Gibt das Hoehentextfeld zurï¿½ck
 	 * 
 	 * @return das Textfeld zur auswahl der Hoehe
 	 */
@@ -63,7 +63,7 @@ public class GroessenwahlWerkzeugUI
 	}
 	
 	/**
-	 * Gibt das Breitentextfeld zurück
+	 * Gibt das Breitentextfeld zurï¿½ck
 	 * 
 	 * @return das Textfeld zur auswahl der Breite
 	 */
@@ -73,7 +73,7 @@ public class GroessenwahlWerkzeugUI
 	}
 	
 	/**
-	 * Gibt den OK-Butten zurück
+	 * Gibt den OK-Butten zurï¿½ck
 	 * 
 	 * @return der OK-Button 
 	 */
@@ -83,7 +83,7 @@ public class GroessenwahlWerkzeugUI
 	}
 	
 	/**
-	 * Gibt den Dialog zurück
+	 * Gibt den Dialog zurï¿½ck
 	 * 
 	 * @return der Dialog
 	 */

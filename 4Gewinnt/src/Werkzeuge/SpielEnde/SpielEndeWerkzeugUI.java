@@ -14,26 +14,30 @@ import javax.swing.JLabel;
  */
 public class SpielEndeWerkzeugUI 
 {
-	private String _gewinner; 
+	private String _gewinnerText; 
 	private JFrame _frame;
 	private JButton _neuGleich;
 	private JButton _neuAnders;
 	
-	public SpielEndeWerkzeugUI(boolean rotGewonnen) 
+	public SpielEndeWerkzeugUI(boolean unentschieden, boolean rotGewonnen) 
 	{
-		if(rotGewonnen)
+		if(unentschieden)
 		{
-			_gewinner = "Rot";
+			_gewinnerText = "Es ist ein Unentschieden!";
+		}
+		else if(rotGewonnen)
+		{
+			_gewinnerText = "Rot hat gewonnen!";
 		}
 		else
 		{
-			_gewinner = "Blau";
+			_gewinnerText = "Blau hat gewonnen!";
 		}
 		initFrame();
 	}
 	
 	/**
-	 * Initialisiert den JFrame für das Spielende
+	 * Initialisiert den JFrame fï¿½r das Spielende
 	 */
 	private void initFrame()
 	{
@@ -41,9 +45,9 @@ public class SpielEndeWerkzeugUI
 		_frame.setLayout(new GridLayout(2,2));
 		
 		_neuGleich = new JButton("Neues Spiel");
-		_neuAnders = new JButton("Andere Spielfeldgroeße wählen");
+		_neuAnders = new JButton("Andere SpielfeldgroeÃŸe waehlen");
 		
-		_frame.add(new JLabel(_gewinner + " hat gewonnen!"));
+		_frame.add(new JLabel(_gewinnerText));
 		_frame.add(new JLabel(""));
 		_frame.add(_neuGleich);
 		_frame.add(_neuAnders);
@@ -63,9 +67,9 @@ public class SpielEndeWerkzeugUI
 	}
 	
 	/**
-	 * Gibt den JFrame zum Spielende zurück
+	 * Gibt den JFrame zum Spielende zurï¿½ck
 	 * 
-	 * @return JFrame für Spielende
+	 * @return JFrame fï¿½r Spielende
 	 */
 	public JFrame getFrame()
 	{
@@ -73,9 +77,9 @@ public class SpielEndeWerkzeugUI
 	}
 	
 	/**
-	 * Gibt den JButton zurück, der genutzt wird um ein neues Spiel anzufangen
+	 * Gibt den JButton zurï¿½ck, der genutzt wird um ein neues Spiel anzufangen
 	 * 
-	 * @return JButton für neues Spiel
+	 * @return JButton fï¿½r neues Spiel
 	 */
 	public JButton getNextButton()
 	{
@@ -83,9 +87,9 @@ public class SpielEndeWerkzeugUI
 	}
 	
 	/**
-	 * Gibt den JButton zurück, der genutzt wird um eine andere Spielfeldgroeße auszuwaehlen
+	 * Gibt den JButton zurï¿½ck, der genutzt wird um eine andere Spielfeldgroeï¿½e auszuwaehlen
 	 * 
-	 * @return JButton um neue Groeße zu waehlen
+	 * @return JButton um neue Groeï¿½e zu waehlen
 	 */
 	public JButton getNewButton()
 	{

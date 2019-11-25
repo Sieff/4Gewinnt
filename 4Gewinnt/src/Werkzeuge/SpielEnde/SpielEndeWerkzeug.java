@@ -8,7 +8,7 @@ import Werkzeuge.GroessenWahl.GroessenwahlWerkzeug;
 import Werkzeuge.SpielRahmen.SpielRahmenWerkzeug;
 
 /**
- * Sorgt für die UI, wenn jemand das Spiel Gewonnen hat
+ * Sorgt fï¿½r die UI, wenn jemand das Spiel Gewonnen hat
  * 
  * @author steff
  *
@@ -19,16 +19,18 @@ public class SpielEndeWerkzeug extends ObservableSubwerkzeug
 	private SpielEndeWerkzeugUI _UI;
 	private int _alteHoehe;
 	private int _alteBreite;
-	private boolean _fensterSchließen;
+	private boolean _fensterSchlieÃŸen;
+	private boolean _unentschieden;
 	
-	public SpielEndeWerkzeug(boolean blauWarDran, int hoehe, int breite, SpielRahmenWerkzeug observer)
+	public SpielEndeWerkzeug(boolean blauWarDran, boolean unentschieden, int hoehe, int breite, SpielRahmenWerkzeug observer)
 	{
+		_unentschieden = unentschieden;
 		_rotGewonnen = !blauWarDran;
 		_alteHoehe = hoehe;
 		_alteBreite = breite;
-		_fensterSchließen = false;
+		_fensterSchlieÃŸen = false;
 		registriereBeobachter(observer);
-		_UI = new SpielEndeWerkzeugUI(_rotGewonnen);
+		_UI = new SpielEndeWerkzeugUI(_unentschieden, _rotGewonnen);
 		
 		_UI.zeigeAn();
 		
@@ -62,22 +64,22 @@ public class SpielEndeWerkzeug extends ObservableSubwerkzeug
 	}
 	
 	/**
-	 * Reagiert auf das drücken eines Buttons in der SpielEndeUI
+	 * Reagiert auf das drï¿½cken eines Buttons in der SpielEndeUI
 	 */
 	private void reagiereAufEingabe()
 	{
 		_UI.getFrame().dispose();
-		_fensterSchließen = true;
+		_fensterSchlieÃŸen = true;
 		informiereUeberAenderung();
 	}
 	
 	/**
-	 * Gibt zurück ob das Fenster mit dem Spiel geschlossen werden soll
+	 * Gibt zurï¿½ck ob das Fenster mit dem Spiel geschlossen werden soll
 	 * 
 	 * @return boolean _fensterSchlie0en
 	 */
-	public boolean getFensterSchließen()
+	public boolean getFensterSchlieÃŸen()
 	{
-		return _fensterSchließen;
+		return _fensterSchlieÃŸen;
 	}
 }

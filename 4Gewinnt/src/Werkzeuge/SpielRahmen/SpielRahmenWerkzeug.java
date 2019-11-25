@@ -10,7 +10,7 @@ import Werkzeuge.Spielbrett.SpielbrettWerkzeug;
 import Werkzeuge.SpielerAnzeige.SpielerAnzeigeWerkzeug;
 
 /**
- * Oberwerkzeug für das Spiel
+ * Oberwerkzeug fï¿½r das Spiel
  * 
  * @author steff
  *
@@ -28,6 +28,8 @@ public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
 	private boolean _spielVorbei;
 	private int _hoehe;
 	private int _breite;
+	private int _spielfeldGroeÃŸe;
+	private int _rundenZaehler;
 	
 	
 	public SpielRahmenWerkzeug(int hoehe, int breite)
@@ -36,6 +38,10 @@ public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
 		_spielVorbei = false;
 		_hoehe = hoehe;
 		_breite = breite;
+		
+		_rundenZaehler = 0;
+		
+		_spielfeldGroeÃŸe = hoehe * breite;
 		
 		_spielbrettWerkzeug = new SpielbrettWerkzeug(_hoehe, _breite);
 		_spaltenAuswahlWerkzeug = new SpaltenAuswahlWerkzeug(_breite, this);
@@ -50,7 +56,7 @@ public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
 	}
 	
 	/**
-	 * Setzt einen Stein in der übergebenen Spalte
+	 * Setzt einen Stein in der ï¿½bergebenen Spalte
 	 * 
 	 * @param spalte die Spalte in der ein Stein gesetzt werden soll
 	 */
@@ -70,18 +76,19 @@ public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
 					_rotIstDran = true;
 				}
 				
+				_rundenZaehler++;
 				aendereSpieler();
 				
-				if(_gewinnService.pruefeAufGewinner(steinHier))
+				if(_gewinnService.pruefeAufGewinner(steinHier) || _rundenZaehler == _spielfeldGroeÃŸe)
 					{
-						_spielEndeWerkzeug = new SpielEndeWerkzeug(_rotIstDran, _hoehe, _breite, this);
+						_spielEndeWerkzeug = new SpielEndeWerkzeug(_rotIstDran, _rundenZaehler == _spielfeldGroeÃŸe,  _hoehe, _breite, this);
 						_spielVorbei = true;
 					}
 			}
 	}
 
 	/**
-	 * Ändert die Spieleranzeige oben
+	 * ï¿½ndert die Spieleranzeige oben
 	 */
 	private void aendereSpieler()
 	{
@@ -112,9 +119,9 @@ public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
 	}
 
 	/**
-	 * Prüft ob die Stelle zu hoch ist
+	 * Prï¿½ft ob die Stelle zu hoch ist
 	 * 
-	 * @param stelle die zu prüfende Stelle
+	 * @param stelle die zu prï¿½fende Stelle
 	 * @returnob die Stelle zu hoch ist
 	 */
 	private boolean istStelleZuHoch(Stelle stelle)
@@ -131,7 +138,7 @@ public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
 		}
 		else
 		{
-			if(_spielEndeWerkzeug.getFensterSchließen())
+			if(_spielEndeWerkzeug.getFensterSchlieÃŸen())
 			{
 				_UI.getFrame().dispose();
 			}

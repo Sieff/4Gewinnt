@@ -6,7 +6,7 @@ import Werkzeuge.ObservableSubwerkzeug;
 import Werkzeuge.SpielRahmen.SpielRahmenWerkzeug;
 
 /**
- * Sorgt für die UI zur Auswahl der Spalte
+ * Sorgt fï¿½r die UI zur Auswahl der Spalte
  * 
  * @author steff
  *
@@ -41,26 +41,10 @@ public class SpaltenAuswahlWerkzeug extends ObservableSubwerkzeug
 				});
 		
 		//TODO Eingabe mit Zahlen
-//		_UI.getSpaltenwahlPlan().addKeyListener(new KeyAdapter() 
-//			{
-//				@Override
-//				public void keyReleased(KeyEvent e)
-//				{
-//					try
-//					{
-//						String s = "" + e.getKeyChar();
-//						_ausgewaehlteSpalte = Integer.parseInt(s);
-//						informiereUeberAenderung();
-//					}
-//					catch(NumberFormatException g){
-//						
-//					}
-//				}
-//			});
 	}
 
 	/**
-	 * Gibt das JPanel der UI zurück
+	 * Gibt das JPanel der UI zurï¿½ck
 	 * 
 	 * @return Das JPanel der Spaltenauswahl-UI
 	 */
@@ -70,7 +54,7 @@ public class SpaltenAuswahlWerkzeug extends ObservableSubwerkzeug
 	}
 	
 	/**
-	 * Gibt die ausgewaehlte Spalte als int zurück
+	 * Gibt die ausgewaehlte Spalte als int zurï¿½ck
 	 * @return Die ausgewaehlte Spalte als int
 	 */
 	public int getAusgewaehlteSpalte()
