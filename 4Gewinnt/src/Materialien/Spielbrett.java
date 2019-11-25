@@ -8,7 +8,7 @@ import Fachwerte.Stelle;
 /**
  * Ein Spielbrett, dass aus einem Doppelarray aus Stellen besteht
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class Spielbrett 
@@ -39,9 +39,9 @@ public class Spielbrett
 	}
 	
 	/**
-	 * Setzt eine Übergebene Stelle auf dem Spielbrett rot
+	 * Setzt eine ï¿½bergebene Stelle auf dem Spielbrett rot
 	 * 
-	 * @param stelle Die zu färbende Stelle
+	 * @param stelle Die zu fï¿½rbende Stelle
 	 */
 	public void setRot(Stelle stelle)
 	{
@@ -49,9 +49,9 @@ public class Spielbrett
 	}
 	
 	/**
-	 * Setzt eine Übergebene Stelle auf dem Spielbrett blau
+	 * Setzt eine ï¿½bergebene Stelle auf dem Spielbrett blau
 	 * 
-	 * @param stelle Die zu färbende Stelle
+	 * @param stelle Die zu fï¿½rbende Stelle
 	 */
 	public void setBlau(Stelle stelle)
 	{
@@ -59,7 +59,7 @@ public class Spielbrett
 	}
 
 	/**
-	 * Gibt die Hoehe des Spielbretts zurück
+	 * Gibt die Hoehe des Spielbretts zurï¿½ck
 	 * 
 	 * @return Die Hoehe des Spielbretts
 	 */
@@ -69,7 +69,7 @@ public class Spielbrett
 	}
 	
 	/**
-	 * Gibt die Breite des Spielbretts zurück
+	 * Gibt die Breite des Spielbretts zurï¿½ck
 	 * 
 	 * @return Die Breite des Spielbretts
 	 */
@@ -79,12 +79,12 @@ public class Spielbrett
 	}
 	
 	/**
-	 * Gibt die Farbe der Stelle als Zahlencode zurück
+	 * Gibt die Farbe der Stelle als Zahlencode zurï¿½ck
 	 * 1 = rot
 	 * 2 = blau
 	 * 0 = farblos
 	 * 
-	 * @param stelle Die Stelle dessen Farbe zurückgegeben werden soll
+	 * @param stelle Die Stelle dessen Farbe zurï¿½ckgegeben werden soll
 	 * @return Die Farbe der Stelle als Zahlencode
 	 */
 	public int getFarbe(Stelle stelle)
@@ -104,7 +104,7 @@ public class Spielbrett
 	}
 
 	/**
-	 * Gibt die Map mit roten Stellen zurück
+	 * Gibt die Map mit roten Stellen zurï¿½ck
 	 * 
 	 * @return Die Map mit roten Stellen
 	 */
@@ -114,7 +114,7 @@ public class Spielbrett
 	}
 
 	/**
-	 * Gibt die Map mit blauen Stellen zurück
+	 * Gibt die Map mit blauen Stellen zurï¿½ck
 	 * 
 	 * @return Die Map mit blauen Stellen
 	 */

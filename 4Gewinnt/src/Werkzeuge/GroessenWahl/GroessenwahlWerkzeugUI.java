@@ -7,7 +7,7 @@ import javax.swing.*;
 /**
  * Die UI f�r die Groessenauswahl
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class GroessenwahlWerkzeugUI 

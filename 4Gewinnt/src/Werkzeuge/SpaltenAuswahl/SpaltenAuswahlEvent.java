@@ -5,7 +5,7 @@ import java.util.EventObject;
 /**
  * Ein SpaltenauswahlEvent, dass ein EventObject ist und durch die ausgewaehlte Spalte beschrieben wird
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpaltenAuswahlEvent extends EventObject

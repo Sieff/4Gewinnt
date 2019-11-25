@@ -4,9 +4,9 @@ package Werkzeuge.Spielbrett;
 import javax.swing.*;
 
 /**
- * Die UI für das Spielbrett 
+ * Die UI fï¿½r das Spielbrett 
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpielbrettWerkzeugUI 
@@ -20,7 +20,7 @@ public class SpielbrettWerkzeugUI
 	}
 	
 	/**
-	 * Erstellt das Hauptpanel für das Spielbrett
+	 * Erstellt das Hauptpanel fï¿½r das Spielbrett
 	 * 
 	 * @param hoehe Hoehe des Spielbretts
 	 * @param breite Breite des Spielbretts
@@ -38,7 +38,7 @@ public class SpielbrettWerkzeugUI
 	}
 
 	/**
-	 * Gibt das Hauptpanel der UI zurück
+	 * Gibt das Hauptpanel der UI zurï¿½ck
 	 * 
 	 * @return das Hauptpanel der UI
 	 */
@@ -48,7 +48,7 @@ public class SpielbrettWerkzeugUI
 	}
 
 	/**
-	 * Gibt den Spielbrettplan der UI zurück
+	 * Gibt den Spielbrettplan der UI zurï¿½ck
 	 * 
 	 * @return der Spielbrettplan der UI
 	 */

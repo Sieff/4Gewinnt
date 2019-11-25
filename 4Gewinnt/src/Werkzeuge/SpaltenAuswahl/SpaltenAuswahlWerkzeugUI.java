@@ -7,7 +7,7 @@ import javax.swing.JScrollPane;
 /**
  * Die UI zur Auswahl der Spalte
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpaltenAuswahlWerkzeugUI 
@@ -37,7 +37,7 @@ public class SpaltenAuswahlWerkzeugUI
 	}
 
 	/**
-	 * Gibt das Hauptpanel der Spaltenauswahl zurück.
+	 * Gibt das Hauptpanel der Spaltenauswahl zurï¿½ck.
 	 * 
 	 * @return Das Hauptpanel
 	 */
@@ -47,7 +47,7 @@ public class SpaltenAuswahlWerkzeugUI
 	}
 	
 	/**
-	 * Gibt den JSpaltenwahlPlan zurück
+	 * Gibt den JSpaltenwahlPlan zurï¿½ck
 	 *  
 	 * @return der Spaltenwahlplan
 	 */

@@ -13,7 +13,7 @@ import Fachwerte.Stelle;
 /**
  * Spielbrettplan als JPanel bestehend aus einem Doppelarray an JPlanPanels
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class JSpielbrettPlan extends JPanel
@@ -45,9 +45,9 @@ public class JSpielbrettPlan extends JPanel
 	}
 	
 	/**
-	 * Fügt die JPlanPanels im SpielbrettGitter ein
+	 * Fï¿½gt die JPlanPanels im SpielbrettGitter ein
 	 * 
-	 * @param component Die einzufügende Komponente
+	 * @param component Die einzufï¿½gende Komponente
 	 * @param gridx Die Breitenkoordinate
 	 * @param gridy Die Hoehenkoordinate
 	 */

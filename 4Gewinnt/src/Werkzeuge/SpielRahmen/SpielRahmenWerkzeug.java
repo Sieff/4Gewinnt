@@ -12,7 +12,7 @@ import Werkzeuge.SpielerAnzeige.SpielerAnzeigeWerkzeug;
 /**
  * Oberwerkzeug f�r das Spiel
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
@@ -77,7 +77,7 @@ public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
 				}
 				
 				_rundenZaehler++;
-				aendereSpieler();
+				aendereSpieleranzeige();
 				
 				if(_gewinnService.pruefeAufGewinner(steinHier) || _rundenZaehler == _spielfeldGroeße)
 					{
@@ -90,7 +90,7 @@ public class SpielRahmenWerkzeug  implements SubwerkzeugObserver
 	/**
 	 * �ndert die Spieleranzeige oben
 	 */
-	private void aendereSpieler()
+	private void aendereSpieleranzeige()
 	{
 		_spielerAnzeigeWerkzeug.aendereSpieler(_rotIstDran);
 	}

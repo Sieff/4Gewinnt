@@ -13,14 +13,14 @@ import java.util.List;
 import javax.swing.*;
 
 /**
- * JComponent für den Plan für die Spaltenauswwahl, bestehend aus einem Array an Buttons
+ * JComponent fï¿½r den Plan fï¿½r die Spaltenauswwahl, bestehend aus einem Array an Buttons
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class JSpaltenwahlPlan extends JPanel
 {
-	public static Dimension SPALTENBUTTON_GROESSE = new Dimension(40, 40);
+	public static Dimension SPALTENBUTTON_GROESSE = new Dimension(30, 30);
 	private static final long serialVersionUID = 1L;
 	private JButton[] _buttons;
 	private List<SpaltenListener> _listener;
@@ -36,7 +36,7 @@ public class JSpaltenwahlPlan extends JPanel
 	}
 	
 	/**
-	 * Erzeugt mehrere Buttons für das ButtonArray
+	 * Erzeugt mehrere Buttons fï¿½r das ButtonArray
 	 * 
 	 * @param breite die Breite des ButtonArrays
 	 */
@@ -50,27 +50,27 @@ public class JSpaltenwahlPlan extends JPanel
             button.setMinimumSize(SPALTENBUTTON_GROESSE);
             button.setPreferredSize(SPALTENBUTTON_GROESSE);
             button.addActionListener(_buttonListener);
-            inReiheEinfuegen(button, 1, spalte);
+            inReiheEinfuegen(button, spalte);
             _buttons[spalte] = button;
         }
 	}
 
 	/**
-	 * Fügt componenten in der Reihe ein
+	 * Fï¿½gt componenten in der Reihe ein
 	 * 
-	 * @param component die einzufügende Komponnente 
+	 * @param component die einzufï¿½gende Komponnente 
 	 * @param gridx Die Hoehenkoordinate im GridBagLayout
 	 * @param gridy Die Breitenkoordinate im GridBagLayout
 	 */
-	private void inReiheEinfuegen(Component component, int gridx, int gridy)
+	private void inReiheEinfuegen(Component component, int gridy)
     {
-        add(component, new GridBagConstraints(gridx, gridy, 1, 1, 1.0, 1.0,
+        add(component, new GridBagConstraints(1, gridy, 1, 1, 1.0, 1.0,
                 GridBagConstraints.CENTER, GridBagConstraints.NONE, new Insets(
                         2, 2, 2, 2), 0, 0));
     }
 	
 	/**
-	 * Gibt das Buttonarray zurück
+	 * Gibt das Buttonarray zurï¿½ck
 	 * 
 	 * @return die Buttons
 	 */
@@ -80,9 +80,9 @@ public class JSpaltenwahlPlan extends JPanel
 	}
 	
 	/**
-	 * Fügt einen Listener zur Spaltenauswahl hinzu
+	 * Fï¿½gt einen Listener zur Spaltenauswahl hinzu
 	 * 
-	 * @param spaltenListener Der Listener der Hinzugefügt werden soll
+	 * @param spaltenListener Der Listener der Hinzugefï¿½gt werden soll
 	 */
 	public void addSpaltenAuswahlListener(SpaltenListener spaltenListener) 
 	{
@@ -90,7 +90,7 @@ public class JSpaltenwahlPlan extends JPanel
 	}
 	
 	/**
-	 * Erzeugt Listener für den Button
+	 * Erzeugt Listener fï¿½r den Button
 	 */
 	private void erzeugeSpaltenAuswahlListener()
     {
@@ -107,9 +107,9 @@ public class JSpaltenwahlPlan extends JPanel
     }
 	
 	/**
-	 * Informiert alle SpaltenAuswahlListener über das SpaltenAuswahlEvent
+	 * Informiert alle SpaltenAuswahlListener ï¿½ber das SpaltenAuswahlEvent
 	 * 
-	 * @param spalte Die ausgewählte Spalte
+	 * @param spalte Die ausgewï¿½hlte Spalte
 	 */
 	private void informiereSpaltenAuswahlListener(int spalte) 
 	{

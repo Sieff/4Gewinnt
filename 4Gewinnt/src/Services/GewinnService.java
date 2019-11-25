@@ -4,9 +4,9 @@ import Fachwerte.Stelle;
 import Materialien.Spielbrett;
 
 /**
- * Service zur überprüfung auf einen Gewinner 
+ * Service zur ï¿½berprï¿½fung auf einen Gewinner 
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class GewinnService 
@@ -19,9 +19,9 @@ public class GewinnService
 	}
 	
 	/**
-	 * Prüft ob mit der übergebenen Stelle jemand gewonnen hat.
+	 * Prï¿½ft ob mit der ï¿½bergebenen Stelle jemand gewonnen hat.
 	 * 
-	 * @param stelle Die zu prüfende Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
 	 * @return Ob jemand gewonnen hat
 	 */
 	public boolean pruefeAufGewinner(Stelle stelle)
@@ -31,9 +31,9 @@ public class GewinnService
 	}
 
 	/**
-	 * Prüft ob horizontal zu der übergebenen Stelle 3 Gleichfarbige Nachbarn vorhanden sind
+	 * Prï¿½ft ob horizontal zu der ï¿½bergebenen Stelle 3 Gleichfarbige Nachbarn vorhanden sind
 	 *  
-	 * @param stelle Die zu prüfende Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
 	 * @param farbe Die farbe der Stelle
 	 * @return Ob 3 oder mehr Nachbarn die gleiche Farbe haben
 	 */
@@ -43,10 +43,10 @@ public class GewinnService
 	}
 
 	/**
-	 * Zählt gleichfarbige Nachbarn nach rechts
+	 * Zï¿½hlt gleichfarbige Nachbarn nach rechts
 	 * 
-	 * @param stelle Die zu prüfende Stelle
-	 * @param farbe Die Farbe der zu prüfenden Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
+	 * @param farbe Die Farbe der zu prï¿½fenden Stelle
 	 * @return Anzahl der Nachbarn nach rechts
 	 */
 	private int pruefeRechts(Stelle stelle , int  farbe )
@@ -62,10 +62,10 @@ public class GewinnService
 	}
 
 	/**
-	 * Zählt gleichfarbige Nachbarn nach links
+	 * Zï¿½hlt gleichfarbige Nachbarn nach links
 	 * 
-	 * @param stelle Die zu prüfende Stelle
-	 * @param farbe Die Farbe der zu prüfenden Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
+	 * @param farbe Die Farbe der zu prï¿½fenden Stelle
 	 * @return Anzahl der Nachbarn nach links
 	 */
 	private int pruefeLinks(Stelle stelle, int farbe) 
@@ -81,9 +81,9 @@ public class GewinnService
 	}
 
 	/**
-	 * Prüft ob vertikal zu der übergebenen Stelle 3 Gleichfarbige Nachbarn vorhanden sind
+	 * Prï¿½ft ob vertikal zu der ï¿½bergebenen Stelle 3 Gleichfarbige Nachbarn vorhanden sind
 	 *  
-	 * @param stelle Die zu prüfende Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
 	 * @param farbe Die farbe der Stelle
 	 * @return Ob 3 oder mehr Nachbarn die gleiche Farbe haben
 	 */
@@ -93,10 +93,10 @@ public class GewinnService
 	}
 
 	/**
-	 * Zählt gleichfarbige Nachbarn nach unten
+	 * Zï¿½hlt gleichfarbige Nachbarn nach unten
 	 * 
-	 * @param stelle Die zu prüfende Stelle
-	 * @param farbe Die Farbe der zu prüfenden Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
+	 * @param farbe Die Farbe der zu prï¿½fenden Stelle
 	 * @return Anzahl der Nachbarn nach unten
 	 */
 	private int pruefeUnten(Stelle stelle, int farbe) 
@@ -112,9 +112,9 @@ public class GewinnService
 	}
 	
 	/**
-	 * Prüft ob diagonal jemand gewonnen hat
+	 * Prï¿½ft ob diagonal jemand gewonnen hat
 	 *  
-	 * @param stelle Die zu prüfende Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
 	 * @param farbe Die farbe der Stelle
 	 * @return Ob diagonal jemand gewonnen hat
 	 */
@@ -124,9 +124,9 @@ public class GewinnService
 	}
 
 	/**
-	 * Prüft ob diagonal nach rechts zu der übergebenen Stelle 3 Gleichfarbige Nachbarn vorhanden sind
+	 * Prï¿½ft ob diagonal nach rechts zu der ï¿½bergebenen Stelle 3 Gleichfarbige Nachbarn vorhanden sind
 	 *  
-	 * @param stelle Die zu prüfende Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
 	 * @param farbe Die farbe der Stelle
 	 * @return Ob 3 oder mehr Nachbarn die gleiche Farbe haben
 	 */
@@ -136,9 +136,9 @@ public class GewinnService
 	}
 
 	/**
-	 * Prüft ob diagonal nach links zu der übergebenen Stelle 3 Gleichfarbige Nachbarn vorhanden sind
+	 * Prï¿½ft ob diagonal nach links zu der ï¿½bergebenen Stelle 3 Gleichfarbige Nachbarn vorhanden sind
 	 *  
-	 * @param stelle Die zu prüfende Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
 	 * @param farbe Die farbe der Stelle
 	 * @return Ob 3 oder mehr Nachbarn die gleiche Farbe haben
 	 */
@@ -148,10 +148,10 @@ public class GewinnService
 	}
 	
 	/**
-	 * Zählt gleichfarbige Nachbarn nach untenrechts
+	 * Zï¿½hlt gleichfarbige Nachbarn nach untenrechts
 	 * 
-	 * @param stelle Die zu prüfende Stelle
-	 * @param farbe Die Farbe der zu prüfenden Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
+	 * @param farbe Die Farbe der zu prï¿½fenden Stelle
 	 * @return Anzahl der Nachbarn nach untenrechts 
 	 */
 	private int pruefeUntenRechts(Stelle stelle, int farbe) {
@@ -166,10 +166,10 @@ public class GewinnService
 	}
 
 	/**
-	 * Zählt gleichfarbige Nachbarn nach obenlinks
+	 * Zï¿½hlt gleichfarbige Nachbarn nach obenlinks
 	 * 
-	 * @param stelle Die zu prüfende Stelle
-	 * @param farbe Die Farbe der zu prüfenden Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
+	 * @param farbe Die Farbe der zu prï¿½fenden Stelle
 	 * @return Anzahl der Nachbarn nach obenlinks  
 	 */
 	private int pruefeObenLinks(Stelle stelle, int farbe) 
@@ -185,10 +185,10 @@ public class GewinnService
 	}
 
 	/**
-	 * Zählt gleichfarbige Nachbarn nach obenrechts
+	 * Zï¿½hlt gleichfarbige Nachbarn nach obenrechts
 	 * 
-	 * @param stelle Die zu prüfende Stelle
-	 * @param farbe Die Farbe der zu prüfenden Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
+	 * @param farbe Die Farbe der zu prï¿½fenden Stelle
 	 * @return Anzahl der Nachbarn nach obenrechts 
 	 */
 	private int pruefeObenRechts(Stelle stelle , int  farbe )
@@ -204,10 +204,10 @@ public class GewinnService
 	}
 
 	/**
-	 * Zählt gleichfarbige Nachbarn nach untenlinks
+	 * Zï¿½hlt gleichfarbige Nachbarn nach untenlinks
 	 * 
-	 * @param stelle Die zu prüfende Stelle
-	 * @param farbe Die Farbe der zu prüfenden Stelle
+	 * @param stelle Die zu prï¿½fende Stelle
+	 * @param farbe Die Farbe der zu prï¿½fenden Stelle
 	 * @return Anzahl der Nachbarn nach untenlinks 
 	 */
 	private int pruefeUntenLinks(Stelle stelle, int farbe) 

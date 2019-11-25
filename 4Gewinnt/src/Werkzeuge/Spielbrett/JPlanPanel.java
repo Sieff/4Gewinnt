@@ -14,7 +14,7 @@ import Fachwerte.Stelle;
 /**
  * Ein einzelnes Panel auf dem Spielplan, kann entweder rot, blau oder grau sein
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class JPlanPanel extends JPanel
@@ -58,7 +58,7 @@ public class JPlanPanel extends JPanel
 	}
 	
 	/**
-	 * Gibt Stelle des Panels zurück
+	 * Gibt Stelle des Panels zurï¿½ck
 	 * 
 	 * @return die Stelle des Panels
 	 */
@@ -68,7 +68,7 @@ public class JPlanPanel extends JPanel
 	}
 	
 	/**
-	 * Gibt zurück ob das Panel rot ist
+	 * Gibt zurï¿½ck ob das Panel rot ist
 	 * 
 	 * @return ob das Panel rot ist
 	 */
@@ -78,7 +78,7 @@ public class JPlanPanel extends JPanel
 	}
 	
 	/**
-	 * Gibt zurück ob das Panel blau ist
+	 * Gibt zurï¿½ck ob das Panel blau ist
 	 * 
 	 * @return ob das Panel blau ist
 	 */
@@ -114,9 +114,9 @@ public class JPlanPanel extends JPanel
     }
 
 	/**
-	 * Gibt die Farbe für das Panel zurück
+	 * Gibt die Farbe fï¿½r das Panel zurï¿½ck
 	 * 
-	 * @return Farbe für das Panel
+	 * @return Farbe fï¿½r das Panel
 	 */
 	private Color farbeFuerAktuellenZustand() 
 	{

@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * Stelle auf dem Spielbrett, welche durch Hoehen- und Breitenkoordinate beschrieben wird
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class Stelle 

@@ -3,9 +3,9 @@ package Werkzeuge.SpielerAnzeige;
 import javax.swing.JPanel;
 
 /**
- * Sorgt für die UI mit dem JPanel, dass den aktuellen Spieler anzeigt
+ * Sorgt fï¿½r die UI mit dem JPanel, dass den aktuellen Spieler anzeigt
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpielerAnzeigeWerkzeug 
@@ -18,7 +18,7 @@ public class SpielerAnzeigeWerkzeug
 	}
 
 	/**
-	 * Gibt das UI-Panel der UI zurück
+	 * Gibt das UI-Panel der UI zurï¿½ck
 	 * @return das JPanel der UI
 	 */
 	public JPanel getUIPanel() 
@@ -27,7 +27,7 @@ public class SpielerAnzeigeWerkzeug
 	}
 
 	/**
-	 * Ändert das JLabel in der UI zum entsprechenden Spieler
+	 * ï¿½ndert das JLabel in der UI zum entsprechenden Spieler
 	 * @param _rotIstDran Ob rot gerade dran ist
 	 */
 	public void aendereSpieler(boolean _rotIstDran) 

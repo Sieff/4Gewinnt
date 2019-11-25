@@ -4,9 +4,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
- * Die UI für das Anzeigen welcher Spieler am Zug ist
+ * Die UI fï¿½r das Anzeigen welcher Spieler am Zug ist
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpielerAnzeigeWerkzeugUI 
@@ -21,7 +21,7 @@ public class SpielerAnzeigeWerkzeugUI
 	}
 	
 	/**
-	 * Initialisiert das JPanel für die Spieleranzeige
+	 * Initialisiert das JPanel fï¿½r die Spieleranzeige
 	 */
 	private void initPanel() 
 	{
@@ -31,7 +31,7 @@ public class SpielerAnzeigeWerkzeugUI
 	}
 	
 	/**
-	 * Gibt das JPanel für die Spieleranzeige zurück
+	 * Gibt das JPanel fï¿½r die Spieleranzeige zurï¿½ck
 	 * @return JPanel _panel
 	 */
 	public JPanel getPanel()
@@ -40,7 +40,7 @@ public class SpielerAnzeigeWerkzeugUI
 	}
 
 	/**
-	 * Setzt das Label für die Spieleranzeige auf spieler
+	 * Setzt das Label fï¿½r die Spieleranzeige auf spieler
 	 * @param spieler der aktuelle Spieler
 	 */
 	public void setLabel(String spieler) 

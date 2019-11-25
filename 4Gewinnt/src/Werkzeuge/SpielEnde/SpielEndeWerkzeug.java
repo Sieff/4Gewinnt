@@ -10,7 +10,7 @@ import Werkzeuge.SpielRahmen.SpielRahmenWerkzeug;
 /**
  * Sorgt f�r die UI, wenn jemand das Spiel Gewonnen hat
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpielEndeWerkzeug extends ObservableSubwerkzeug

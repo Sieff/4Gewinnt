@@ -8,7 +8,7 @@ import Werkzeuge.SpielRahmen.SpielRahmenWerkzeug;
 /**
  * Sorgt f�r die UI zur Auswahl der Spalte
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpaltenAuswahlWerkzeug extends ObservableSubwerkzeug

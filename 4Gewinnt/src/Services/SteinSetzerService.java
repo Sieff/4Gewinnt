@@ -7,7 +7,7 @@ import Materialien.Spielbrett;
 /**
  * Service zur Berechnung eines zu setzenden Steins
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SteinSetzerService 
@@ -20,7 +20,7 @@ public class SteinSetzerService
 	}
 
 	/**
-	 * Berechnet die Stelle die gesetzt werden soll in der übergebenen Spalte
+	 * Berechnet die Stelle die gesetzt werden soll in der ï¿½bergebenen Spalte
 	 * 
 	 * @param spalte Die Spalte in der die Stelle berechnet werden soll
 	 * @return die Stelle
@@ -33,30 +33,30 @@ public class SteinSetzerService
 	}
 	
 	/**
-	 * Setzt eine Stelle in die Map für rote Stellen auf dem Spielbrett
+	 * Setzt eine Stelle in die Map fï¿½r rote Stellen auf dem Spielbrett
 	 * 
 	 * @param stelle die zu setzende Stelle
 	 */
 	public void setzeRot(Stelle stelle) 
 	{
-		_spielbrett.getRote().put(stelle.toString(), stelle);
+		_spielbrett.setRot(stelle);
 	}
 
 	/**
-	 * Setzt eine Stelle in die Map für rote Stellen auf dem Spielbrett
+	 * Setzt eine Stelle in die Map fï¿½r rote Stellen auf dem Spielbrett
 	 * 
 	 * @param stelle die zu setzende Stelle
 	 */
 	public void setzeBlau(Stelle stelle) 
 	{
-		_spielbrett.getBlaue().put(stelle.toString(), stelle);
+		_spielbrett.setBlau(stelle);
 	}
 	
 	/**
-	 * Gibt die niedrigste Höhe zurück in der ein Stein gesetzt werden kann in der übergebenen Spalte
+	 * Gibt die niedrigste Hï¿½he zurï¿½ck in der ein Stein gesetzt werden kann in der ï¿½bergebenen Spalte
 	 * 
 	 * @param spalte Die Spalte in der die Hoehe berechnet werden soll
-	 * @return Die niedrigste mögliche Hoehe
+	 * @return Die niedrigste mï¿½gliche Hoehe
 	 */
 	private int berechneNiedrigsteHoehe(int spalte) 
 	{
@@ -69,9 +69,9 @@ public class SteinSetzerService
 	}
 	
 	/**
-	 * Prüft ob eine Stelle bereits belegt ist
+	 * Prï¿½ft ob eine Stelle bereits belegt ist
 	 * 
-	 * @param stelle die Stelle die überprüft werden soll
+	 * @param stelle die Stelle die ï¿½berprï¿½ft werden soll
 	 * @return Ob die Stelle besetzt ist
 	 */
 	private boolean istStelleBesetzt(Stelle stelle)

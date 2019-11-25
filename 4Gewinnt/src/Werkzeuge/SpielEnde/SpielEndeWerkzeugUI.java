@@ -9,7 +9,7 @@ import javax.swing.JLabel;
 /**
  * Die UI mit JFrame die erscheint wenn ein Spieler gewinnt
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpielEndeWerkzeugUI 

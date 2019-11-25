@@ -3,15 +3,15 @@ package Werkzeuge.SpaltenAuswahl;
 import java.util.EventListener;
 
 /**
- * Ein EventListener für Spaltenauswahl
+ * Ein EventListener fï¿½r Spaltenauswahl
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public interface SpaltenListener extends EventListener 
 {
 	/**
-	 * Auswahl zur Spaltenwahl wurde getätigt
+	 * Auswahl zur Spaltenwahl wurde getï¿½tigt
 	 * 
 	 * @param e
 	 */

@@ -6,9 +6,9 @@ import java.awt.event.ActionListener;
 import Werkzeuge.SpielRahmen.SpielRahmenWerkzeug;
 
 /**
- * Sorgt für UI zur Auswahl der Groesse des Spielbretts
+ * Sorgt fï¿½r UI zur Auswahl der Groesse des Spielbretts
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class GroessenwahlWerkzeug 

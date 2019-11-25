@@ -6,9 +6,9 @@ import Fachwerte.Stelle;
 import Materialien.Spielbrett;
 
 /**
- * Sorgt für die SpielbrettUI und das Spielbrett
+ * Sorgt fï¿½r die SpielbrettUI und das Spielbrett
  * 
- * @author steff
+ * @author Steffen Schubert
  *
  */
 public class SpielbrettWerkzeug 
@@ -35,7 +35,7 @@ public class SpielbrettWerkzeug
 	}
 	
 	/**
-	 * Gibt das Hauptpanel der UI zurück
+	 * Gibt das Hauptpanel der UI zurï¿½ck
 	 * 
 	 * @return das Hauptpanel der UI
 	 */
@@ -45,7 +45,7 @@ public class SpielbrettWerkzeug
 	}
 	
 	/**
-	 * Setzt die übergebene Stelle rot
+	 * Setzt die ï¿½bergebene Stelle rot
 	 * 
 	 * @param stelle die zu setzende Stelle
 	 */
@@ -56,7 +56,7 @@ public class SpielbrettWerkzeug
 	}
 	
 	/**
-	 * Setzt die übergebene Stelle blau
+	 * Setzt die ï¿½bergebene Stelle blau
 	 * 
 	 * @param stelle die zu setzende Stelle
 	 */
@@ -66,7 +66,7 @@ public class SpielbrettWerkzeug
 	}
 	
 	/**
-	 * Gibt das Spielbrett zurück
+	 * Gibt das Spielbrett zurï¿½ck
 	 * 
 	 * @return das Spielbrett
 	 */

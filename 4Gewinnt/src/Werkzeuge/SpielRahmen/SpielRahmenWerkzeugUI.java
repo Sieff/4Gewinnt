@@ -5,9 +5,9 @@ import javax.swing.BoxLayout;
 import javax.swing.*;
 
 /**
- * Sorgt für den JFrame in dem alles vorhanden ist
- * @author steff
- *
+ * Sorgt fï¿½r den JFrame in dem alles vorhanden ist
+ * 
+ * @author Steffen Schubert
  */
 public class SpielRahmenWerkzeugUI 
 {
@@ -19,10 +19,10 @@ public class SpielRahmenWerkzeugUI
 	}
 	
 	/**
-	 * Initialisiert den Haupt-Frame für das Spiel
+	 * Initialisiert den Haupt-Frame fï¿½r das Spiel
 	 * 
-	 * @param spielbrettWerkzeugPanel Das Panel für das Spielbrett
-	 * @param spaltenAuswahlWerkzeugPanel Das Panel für die Auswahl der Spalte
+	 * @param spielbrettWerkzeugPanel Das Panel fï¿½r das Spielbrett
+	 * @param spaltenAuswahlWerkzeugPanel Das Panel fï¿½r die Auswahl der Spalte
 	 * @param spielerAnzeigePanel Das Panel zur Anzeige des momentanen Spielers
 	 */
 	private void initFrame(JPanel spielbrettWerkzeugPanel, JPanel spaltenAuswahlWerkzeugPanel, JPanel spielerAnzeigePanel)
@@ -48,7 +48,7 @@ public class SpielRahmenWerkzeugUI
 	}
 	
 	/**
-	 * Gibt den Haupt-JFrame zurück
+	 * Gibt den Haupt-JFrame zurï¿½ck
 	 * @return der JFrame des Spiels
 	 */
 	public JFrame getFrame()
